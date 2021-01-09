@@ -1,0 +1,64 @@
+*{
+    top: 0;
+    left: 0;
+    color: white;
+}
+
+body{
+    background-image: url(http://localhost/pildoras/PHP-MySQL/crud/img/clowns.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-repeat: center;
+    color: white;
+
+}
+
+h1{
+    margin: auto;
+    align-items: center;
+    padding: 40px;
+    color: #fff;
+    display: block;
+}
+table{
+    margin: auto;
+    display: block;
+    align-items: center;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    color: #fff;
+    padding: 40px;
+}
+
+tr{
+    margin: auto;
+}
+
+td{
+    border: 2px solid black;
+    justify-content: center;
+    color: #111;
+    padding: 2px;
+    align-items: center;
+}
+
+.primera_fila{
+    font-weight: bold;
+    background: #ffFFF0;
+    color:#222;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bot{
+    color: #111;
+}
+
+input{
+    color: #111;
+}
