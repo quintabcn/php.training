@@ -15,17 +15,16 @@
 
         public function get_ingredientes(){
 
-            $consulta=$this->db->query("SELECT * FROM ingredients");
+            require ("modelo/paginacion.php");
+
+            $consulta=$this->db->query("SELECT * FROM ingredients LIMIT $start, $tamany");
 
             while($filas=$consulta->fetch(PDO::FETCH_ASSOC)){
                 $this->ingredientes[]=$filas;
-            }
+                }
 
             return $this->ingredientes;
 
-        }
-        
-            
+        }            
     }
-
 ?>
