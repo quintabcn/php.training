@@ -8,44 +8,39 @@
 <body>
     <?php
 
-    try{
+        try{
 
-        $base=new PDO("mysql:host=localhost; dbname=perfulist", 'root', '');
+            $base=new PDO("mysql:host=localhost; dbname=perfulist", 'root', '');
 
-        $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql="SELECT * FROM users WHERE username=:user AND password=:pass";
+            $sql="SELECT * FROM users WHERE username=:user AND password=:pass";
 
-        $resultado=$base->prepare($sql);
+            $resultado=$base->prepare($sql);
 
-        $user=htmlentities(addslashes($_POST['username']));
-        $pass=htmlentities(addslashes($_POST['password']));
+            $user=htmlentities(addslashes($_POST['username']));
+            $pass=htmlentities(addslashes($_POST['password']));
 
-        $resultado->bindValue(":user", $user);
-        $resultado->bindValue(":pass", $pass);
+            $resultado->bindValue(":user", $user);
+            $resultado->bindValue(":pass", $pass);
 
-        $resultado->execute();
+            $resultado->execute();
 
-        $registro=$resultado->rowCount();
+            $registro=$resultado->rowCount();
 
-        if($registro!=0){
+            if($registro!=0){
 
-            echo "<h2>Bienvenida</h2>"
+                echo "<h2>Bienvenida</h2>";
 
-        }else{
-            header ("location:login.php");
+            }else{
+                header ("location:login.php");
+            }
+
+        }catch (Exception $e){
+
+            die("Error: " .$e->getMessage());
+
         }
-
-
-
-
-
-    }catch (Exception $e){
-
-        die("Error: " .$e->getMessage());
-
-    }
-
     ?>
 </body>
 </html>

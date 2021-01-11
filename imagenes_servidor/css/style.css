@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    top: 0;
+    left: 0;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url(http://localhost/php.training/CRUD-MVC/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-repeat: center;
+    color: white;
+}
+
+h1{
+    margin: auto;
+    align-items: center;
+    padding: 40px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    transition: ease-in-out 0.5s;
+    background: #ccc;
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, #007cf0,#001bd1, #000000);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2{
+    margin: auto;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+
+form{
+    display: flex;
+}
+
+table{
+    margin: auto;
+    display: block;
+    align-items: center;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    color: #fff;
+    padding: 40px;
+    transition: ease-in-out 0.5s;
+}
+
+tr{
+    margin: auto;
+}
+
+td{
+    border: 2px solid black;
+    justify-content: center;
+    color: #111;
+    padding: 2px;
+    align-items: center;
+}
+
+.primera_fila{
+    font-weight: bold;
+    background: #ffFFF0;
+    color:#222;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bot{
+    color: #111;
+}
+
+input{
+    color: #111;
+}
