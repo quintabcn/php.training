@@ -22,10 +22,24 @@
                     exit();
                 }
 
-                $miconsulta="SELECT * FROM contenido "
+                $miconsulta="SELECT * FROM contenido ORDER BY fecha DESC";
+
+                if($resultado=mysqli_query($miconexion, $miconsulta)){
+                    while($registro=mysqli_fetch_assoc($resultado)){
+                        echo "<h3>".$registro['titulo']."</h3><br/>";
+                        echo "<h4>".$registro['fecha']."</h4><br/>";
+                        echo "<div style='width:400px'>".$registro['comentario']."</div><br/><br/>";
+
+                        if($registro['imagen']!==""){
+                            echo "<img src='imagenes/" . $registro['imagen']. "' width='300px' >";
+                        }
+
+                        echo "<hr/>";
+                    
+                    }
+                }
     
     ?>
 
-     
 </body>
 </html>
